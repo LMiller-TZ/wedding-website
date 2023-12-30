@@ -49,6 +49,28 @@
             }
         }
     </script>
+    <script type='text/javascript'>
+    $(document).ready(function() {
+        $("input:radio[name=choice]").click(function() {
+          var selection;
+          selection = $("input:radio[name=choice]:checked").val()
+          switch (selection) {
+            case "yes":
+              $('#divQuestion').show();
+              $('#rsvp-initial-submit').hide();
+              break;
+            case "no":
+              $('#divQuestion').hide();
+              $('#rsvp-initial-submit').show();
+              break;
+            case "none":
+              $('#divQuestion').hide();
+              $('#rsvp-initial-submit').show();
+              break
+          }
+        });
+    });
+    </script>
 
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -613,50 +635,60 @@
             <div class="col-md-6 col-md-offset-3">
                 <h3>What are you waiting for?</h3>
                 <p>Well, us. We will update this section later once official invites have been sent</p>
-                <form id="rsvp-form" class="rsvp-form"
-                      action=""
-                      method="POST">
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-envelope"></i><input type="email" name="email" class=""
-                                                                     placeholder="Your email"
-                                                                     required>
+                <form id="rsvp-initial" class="rsvp-form">
+                    <h4>Are you able to attend the wedding?</h4>
+                    <input type="radio" name="choice" value="yes"/> : Yes<br />
+                    <input type="radio" name="choice" value="no"/> : No<br />
+                    <div id="divQuestion" class="row">
+                        <form id="rsvp-form" class="rsvp-form"
+                              action=""
+                              method="POST">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="form-input-group">
+                                        <i class="fa fa-envelope"></i><input type="email" name="email" class=""
+                                                                             placeholder="Your email"
+                                                                             required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="form-input-group">
+                                        <i class="fa fa-user"></i><input name="name" class=""
+                                                                         placeholder="Your name"
+                                                                         required>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-user"></i><input name="name" class=""
-                                                                 placeholder="Your name"
-                                                                 required>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="form-input-group">
+                                        <i class="fa fa-users"></i><input type="number" name="extras" class="" min="0"
+                                                                          max="2"
+                                                                          placeholder="Guests?"
+                                                                          required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="form-input-group">
+                                        <i class="fa fa-key"></i><input type="number" name="invite_code" id="invite_code"
+                                                                        class="" min="0"
+                                                                        placeholder="Invite code"
+                                                                        required>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                            <div class="row">
+                                <div class="col-md-12" id="alert-wrapper"></div>
+                            </div>
+                            <button class="btn-fill rsvp-btn">
+                                Yes,
+                                that's me!
+                            </button>
+                        </form>
                     </div>
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-users"></i><input type="number" name="extras" class="" min="0"
-                                                                  max="2"
-                                                                  placeholder="Guests?"
-                                                                  required>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-key"></i><input type="number" name="invite_code" id="invite_code"
-                                                                class="" min="0"
-                                                                placeholder="Invite code"
-                                                                required>
-                            </div>
-                        </div>
+                    <div id="rsvp-initial-submit" class="row">
+                      <input type="submit" value="Submit">
                     </div>
-                    <div class="row">
-                        <div class="col-md-12" id="alert-wrapper"></div>
-                    </div>
-                    <button class="btn-fill rsvp-btn">
-                        Yes,
-                        that's me!
-                    </button>
                 </form>
             </div>
         </div>
