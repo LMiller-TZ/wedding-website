@@ -56,7 +56,7 @@ $(document).ready(function () {
     /***************** Find Map Canvas Height ******************/
      $(function () {
         let absoluteDivHeight = document.getElementById("map-canvas")[0].offsetHeight;
-        let blankDiv = document.getElementById("intro")[0];
+        let blankDiv = document.getElementByClassName('blankDiv')[0];
         blankDiv.style.height = absoluteDivHeight + 5 + "px";
     });
 
