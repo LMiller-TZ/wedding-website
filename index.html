@@ -628,7 +628,7 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
                     </button>
                     <div class="section-padding">
-                        <h3>Thank you!</h3>
+                        <h3>Thank you <span id="lblValue"></span>!</h3>
                         <p>We are glad to see you join us on our big day.</p>
                         <div id="add-to-cal"></div>
                     </div>
@@ -665,7 +665,7 @@
                                 </div>
                                 <div class="col-md-6 col-sm-6">
                                     <div class="form-input-group">
-                                        <i class="fa fa-user"></i><input name="name" class=""
+                                        <i class="fa fa-user"></i><input name="name" id="inp" onKeyUp="myFun()" onKeyPress="myFun()" class=""
                                                                          placeholder="Your name"
                                                                          required>
                                     </div>
