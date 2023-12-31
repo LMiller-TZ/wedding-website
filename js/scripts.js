@@ -53,6 +53,13 @@ $(document).ready(function () {
         animation: "slide"
     });
 
+    /***************** Find Map Canvas Height ******************/
+     $(function () {
+        let absoluteDivHeight = document.getElementById("map-canvas")[0].offsetHeight;
+        let blankDiv = document.getElementById("intro")[0];
+        blankDiv.style.height = absoluteDivHeight + 5 + "px";
+    });
+
     /***************** Initiate Fancybox ******************/
 
     $('.single_image').fancybox({
