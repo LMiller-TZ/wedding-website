@@ -64,6 +64,7 @@
               $("#invite_code").attr('required', '');
               $("#radio11").attr('required', '');
               document.getElementById('modalText').innerHTML = yesText;
+              document.getElementById('sub-button').innerHTML = "Yes, that's me!";
               break;
             case "no":
               $('#divQuestion').show();
@@ -78,7 +79,8 @@
               $('#guest5').hide();
               $('#email-form').hide();
               $('#sub-button').show();
-              document.getElementById('modalText').innerHTML = yesText;
+              document.getElementById('modalText').innerHTML = noText;
+              document.getElementById('sub-button').innerHTML = "Submit";
               break;
             case "none":
               $('#divQuestion').hide();
