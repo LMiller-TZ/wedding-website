@@ -72,44 +72,56 @@
     <script type='text/javascript'>
     $(document).ready(function() {
         $("input:number[name=invite_code_validation]").click(function() {
-          var selection = $("#invite_code").val()
+          var selection = $("#invite_code").val();
           // var selection = $('input[type=number][name=invite_code_validation]').val();
-          switch (selection) {
-            case "1234":
+          if( selection = 1234) {
               $('#guest1').show(); 
               $('#guest2').hide();
               $('#guest3').hide();
               $('#guest4').hide();
               $('#guest5').hide();
-              break;
-            case "2345":
+              $('#email-form').show();
+              $('#sub-button').show();
+            } else if( selection = 2345) {
               $('#guest1').show();
               $('#guest2').show();
               $('#guest3').hide();
               $('#guest4').hide();
               $('#guest5').hide();
-              break;
-            case "3456":
+              $('#email-form').show();
+              $('#sub-button').show();
+            } else if( selection = 3456) {
               $('#guest1').show();
               $('#guest2').show();
               $('#guest3').show();
               $('#guest4').hide();
               $('#guest5').hide();
-              break;
-            case "4567":
+              $('#email-form').show();
+              $('#sub-button').show();
+            } else if( selection = 4567) {
               $('#guest1').show();
               $('#guest2').show();
               $('#guest3').show();
               $('#guest4').show();
               $('#guest5').hide();
-              break;
-            case "5678":
+              $('#email-form').show();
+              $('#sub-button').show();
+            } else if( selection = 5678) {
               $('#guest1').show();
               $('#guest2').show();
               $('#guest3').show();
               $('#guest4').show();
               $('#guest5').show();
-              break
+              $('#email-form').show();
+              $('#sub-button').show();
+            } else
+              $('#guest1').hide();
+              $('#guest2').hide();
+              $('#guest3').hide();
+              $('#guest4').hide();
+              $('#guest5').hide();
+              $('#email-form').hide();
+              $('#sub-button').hide();
           }
         });
     });
@@ -737,28 +749,28 @@
                                 </div>
                                 <div id="postInviteCode">
                                     <div class="row">
-                                        <div class="col-md-6 col-sm-6" id="guest1">
+                                        <div class="col-md-6 col-sm-6" id="guest1" style="display:none;">
                                             <div class="form-input-group">
                                                 <i class="fa fa-user"></i><input name="name" id="inp" onKeyUp="myFun()" onKeyPress="myFun()" class=""
                                                                                  placeholder="Guest 1 Name"
                                                                                  required>
                                             </div>
                                         </div>
-                                        <div class="col-md-6 col-sm-6" id="guest2">
+                                        <div class="col-md-6 col-sm-6" id="guest2" style="display:none;">
                                             <div class="form-input-group">
                                                 <i class="fa fa-user"></i><input name="name2" class=""
                                                                                  placeholder="Guest 2 Name"
                                                                                  required>
                                             </div>
                                         </div>
-                                        <div class="col-md-6 col-sm-6" id="guest3">
+                                        <div class="col-md-6 col-sm-6" id="guest3" style="display:none;">
                                             <div class="form-input-group">
                                                 <i class="fa fa-user"></i><input name="name3" class=""
                                                                                  placeholder="Guest 3 Name"
                                                                                  required>
                                             </div>
                                         </div>
-                                        <div class="col-md-6 col-sm-6" id="guest4">
+                                        <div class="col-md-6 col-sm-6" id="guest4" style="display:none;">
                                             <div class="form-input-group">
                                                 <i class="fa fa-user"></i><input name="name4" class=""
                                                                                  placeholder="Guest 4 Name"
@@ -767,7 +779,7 @@
                                         </div>
                                         <div class="col-md-3 col-sm-3">
                                         </div>
-                                        <div class="col-md-6 col-sm-6" id="guest5">
+                                        <div class="col-md-6 col-sm-6" id="guest5" style="display:none;">
                                             <div class="form-input-group">
                                                 <i class="fa fa-user"></i><input name="name5" class=""
                                                                                  placeholder="Guest 5 Name"
@@ -775,7 +787,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row">
+                                    <div class="row" style="display:none;" id="email-form">
                                         <div class="col-md-12 col-sm-12">
                                             <div class="form-input-group">
                                                 <i class="fa fa-envelope"></i><input type="email" name="email" class=""
@@ -789,7 +801,7 @@
                             <div class="row">
                                 <div class="col-md-12" id="alert-wrapper"></div>
                             </div>
-                            <button class="btn-fill rsvp-btn">
+                            <button class="btn-fill rsvp-btn" id="sub-button" style="display:none;">
                                 Yes,
                                 that's me!
                             </button>
