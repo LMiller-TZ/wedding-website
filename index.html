@@ -68,6 +68,53 @@
         });
     });
     </script>
+
+    <script type='text/javascript'>
+    $(document).ready(function() {
+        $("input:number[name=invite_code_validation]").click(function() {
+          var selection = $("#invite_code").val()
+          // var selection = $('input[type=number][name=invite_code_validation]').val();
+          switch (selection) {
+            case "1234":
+              $('#guest1').show(); 
+              $('#guest2').hide();
+              $('#guest3').hide();
+              $('#guest4').hide();
+              $('#guest5').hide();
+              break;
+            case "2345":
+              $('#guest1').show();
+              $('#guest2').show();
+              $('#guest3').hide();
+              $('#guest4').hide();
+              $('#guest5').hide();
+              break;
+            case "3456":
+              $('#guest1').show();
+              $('#guest2').show();
+              $('#guest3').show();
+              $('#guest4').hide();
+              $('#guest5').hide();
+              break;
+            case "4567":
+              $('#guest1').show();
+              $('#guest2').show();
+              $('#guest3').show();
+              $('#guest4').show();
+              $('#guest5').hide();
+              break;
+            case "5678":
+              $('#guest1').show();
+              $('#guest2').show();
+              $('#guest3').show();
+              $('#guest4').show();
+              $('#guest5').show();
+              break
+          }
+        });
+    });
+    </script>
+    
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -656,7 +703,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div id="divQuestion" class="row" style="display:none;">
+                            <div id="divQuestion" style="display:none;">
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12">
                                         <h4>Our dress rehearsal on Thursday, April 4th, is open invite. We need to know by 2 weeks before the wedding how many people are coming so we have the right number of meals. Are you planning on joining us for our dress rehearsal?<!-- While we would love to see everyone early regardless, we know that arriving a day early can be beneficial for some people's schedules too.
@@ -674,37 +721,67 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-6 col-sm-6">
-                                        <div class="form-input-group">
-                                            <i class="fa fa-user"></i><input name="name" id="inp" onKeyUp="myFun()" onKeyPress="myFun()" class=""
-                                                                             placeholder="Your name"
-                                                                             required>
-                                        </div>
+                                <div class="row" id="code-enter">
+                                    <div class="col-md-3 col-sm-3">
                                     </div>
                                     <div class="col-md-6 col-sm-6">
                                         <div class="form-input-group">
-                                            <i class="fa fa-envelope"></i><input type="email" name="email" class=""
-                                                                                 placeholder="Your email"
-                                                                                 required>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6 col-sm-6">
-                                        <div class="form-input-group">
-                                            <i class="fa fa-users"></i><input type="number" name="guests" class="" min="0"
-                                                                              max="4"
-                                                                              placeholder="Guests?"
-                                                                              required>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6">
-                                        <div class="form-input-group">
-                                            <i class="fa fa-key"></i><input type="number" name="invite_code" id="invite_code"
+                                            <i class="fa fa-key"></i><input type="number" name="invite_code_validation" id="invite_code"
                                                                             class="" min="0"
                                                                             placeholder="Invite code"
                                                                             required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-3">
+                                    </div>
+                                </div>
+                                <div id="postInviteCode">
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-6" id="guest1">
+                                            <div class="form-input-group">
+                                                <i class="fa fa-user"></i><input name="name" id="inp" onKeyUp="myFun()" onKeyPress="myFun()" class=""
+                                                                                 placeholder="Guest 1 Name"
+                                                                                 required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6" id="guest2">
+                                            <div class="form-input-group">
+                                                <i class="fa fa-user"></i><input name="name2" class=""
+                                                                                 placeholder="Guest 2 Name"
+                                                                                 required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6" id="guest3">
+                                            <div class="form-input-group">
+                                                <i class="fa fa-user"></i><input name="name3" class=""
+                                                                                 placeholder="Guest 3 Name"
+                                                                                 required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6" id="guest4">
+                                            <div class="form-input-group">
+                                                <i class="fa fa-user"></i><input name="name4" class=""
+                                                                                 placeholder="Guest 4 Name"
+                                                                                 required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-sm-3">
+                                        </div>
+                                        <div class="col-md-6 col-sm-6" id="guest5">
+                                            <div class="form-input-group">
+                                                <i class="fa fa-user"></i><input name="name5" class=""
+                                                                                 placeholder="Guest 5 Name"
+                                                                                 required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12 col-sm-12">
+                                            <div class="form-input-group">
+                                                <i class="fa fa-envelope"></i><input type="email" name="email" class=""
+                                                                                     placeholder="Your email"
+                                                                                     required>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
