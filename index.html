@@ -65,6 +65,8 @@
               break;
             case "no":
               $('#divQuestion').show();
+              $('#rehearsalQuestion').hide();
+              $('#code-enter').hide();
               $('#guest1').hide();
               $('#guest2').hide();
               $('#guest3').hide();
@@ -739,7 +741,7 @@
                                 </div>
                             </div>
                             <div id="divQuestion" style="display:none;">
-                                <div class="row">
+                                <div class="row" id="rehearsalQuestion">
                                     <div class="col-md-12 col-sm-12">
                                         <h4>Our dress rehearsal on Thursday, April 4th, is open invite. We need to know 1 month before the wedding how many people are coming so we have the right number of meals. Are you planning on joining us for our dress rehearsal?<!-- While we would love to see everyone early regardless, we know that arriving a day early can be beneficial for some people's schedules too.
                                         We also understand getting an extra day off work is hard too so we don't expect either choice from anybody. That being said, to get a better headcount, are you planning on coming April 4th for our dress rehearsal? --></h4>
