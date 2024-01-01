@@ -76,52 +76,53 @@
           // var selection = $('input[type=number][name=invite_code_validation]').val();
           if( val == "1234") {
               $('#guest1').show();
-              $("#guest1").attr('required', true);
+              $("#inp").attr('required', '');
               $('#guest2').hide();
               $('#guest3').hide();
               $('#guest4').hide();
               $('#guest5').hide();
               $('#email-form').show();
-              $("#email-form").attr('required', true);
+              $("#email-form-input").attr('required', '');
               $('#sub-button').show();
             } else if( val == "2345") {
               $('#guest1').show();
-              $("#guest1").attr('required', true);
+              $("#inp").attr('required', '');
               $('#guest2').show();
               $('#guest3').hide();
               $('#guest4').hide();
               $('#guest5').hide();
               $('#email-form').show();
-              $("#email-form").attr('required', true);
+              $("#email-form-input").attr('required', '');
               $('#sub-button').show();
             } else if( val == "6039") {
               $('#guest1').show();
-              $("#guest1").attr('required', true);
+              $("#inp").attr('required', '');
               $('#guest2').show();
               $('#guest3').show();
               $('#guest4').hide();
               $('#guest5').hide();
               $('#email-form').show();
-              $("#email-form").attr('required', true);
+              $("#email-form-input").attr('required', '');
               $('#sub-button').show();
             } else if( val == "4567") {
               $('#guest1').show();
-              $("#guest1").attr('required', true);
+              $("#inp").attr('required', '');
               $('#guest2').show();
               $('#guest3').show();
               $('#guest4').show();
               $('#guest5').hide();
               $('#email-form').show();
-              $("#email-form").attr('required', true);
+              $("#email-form-input").attr('required', '');
               $('#sub-button').show();
             } else if( val == "5678") {
               $('#guest1').show();
+              $("#inp").attr('required', '');
               $('#guest2').show();
               $('#guest3').show();
               $('#guest4').show();
               $('#guest5').show();
               $('#email-form').show();
-              $("#email-form").attr('required', true);
+              $("#email-form-input").attr('required', '');
               $('#sub-button').show();
             } else {
               $('#guest1').hide();
@@ -800,7 +801,7 @@
                                     <div class="row" style="display:none;" id="email-form">
                                         <div class="col-md-12 col-sm-12">
                                             <div class="form-input-group">
-                                                <i class="fa fa-envelope"></i><input type="email" name="email" class=""
+                                                <i class="fa fa-envelope"></i><input type="email" id="email-form-input" name="email" class=""
                                                                                      placeholder="Your email"
                                                                                      >
                                             </div>
