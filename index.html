@@ -75,36 +75,44 @@
           var selection = $("#invite_code").val();
           // var selection = $('input[type=number][name=invite_code_validation]').val();
           if( selection = 1234) {
-              $('#guest1').show(); 
+              $('#guest1').show();
+              $("#guest1").attr('required', '');
               $('#guest2').hide();
               $('#guest3').hide();
               $('#guest4').hide();
               $('#guest5').hide();
               $('#email-form').show();
+              $("#email-form").attr('required', '');
               $('#sub-button').show();
             } else if( selection = 2345) {
               $('#guest1').show();
+              $("#guest1").attr('required', '');
               $('#guest2').show();
               $('#guest3').hide();
               $('#guest4').hide();
               $('#guest5').hide();
               $('#email-form').show();
+              $("#email-form").attr('required', '');
               $('#sub-button').show();
             } else if( selection = 3456) {
               $('#guest1').show();
+              $("#guest1").attr('required', '');
               $('#guest2').show();
               $('#guest3').show();
               $('#guest4').hide();
               $('#guest5').hide();
               $('#email-form').show();
+              $("#email-form").attr('required', '');
               $('#sub-button').show();
             } else if( selection = 4567) {
               $('#guest1').show();
+              $("#guest1").attr('required', '');
               $('#guest2').show();
               $('#guest3').show();
               $('#guest4').show();
               $('#guest5').hide();
               $('#email-form').show();
+              $("#email-form").attr('required', '');
               $('#sub-button').show();
             } else if( selection = 5678) {
               $('#guest1').show();
@@ -113,6 +121,7 @@
               $('#guest4').show();
               $('#guest5').show();
               $('#email-form').show();
+              $("#email-form").attr('required', '');
               $('#sub-button').show();
             } else
               $('#guest1').hide();
@@ -753,7 +762,7 @@
                                             <div class="form-input-group">
                                                 <i class="fa fa-user"></i><input name="name" id="inp" onKeyUp="myFun()" onKeyPress="myFun()" class=""
                                                                                  placeholder="Guest 1 Name"
-                                                                                 required>
+                                                                                 >
                                             </div>
                                         </div>
                                         <div class="col-md-6 col-sm-6" id="guest2" style="display:none;">
@@ -792,7 +801,7 @@
                                             <div class="form-input-group">
                                                 <i class="fa fa-envelope"></i><input type="email" name="email" class=""
                                                                                      placeholder="Your email"
-                                                                                     required>
+                                                                                     >
                                             </div>
                                         </div>
                                     </div>
