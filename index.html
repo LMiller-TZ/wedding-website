@@ -57,15 +57,19 @@
           switch (selection) {
             case "yes":
               $('#divQuestion').show();
-              $('#no-button').hide();
               break;
             case "no":
-              $('#divQuestion').hide();
-              $('#no-button').show();
+              $('#divQuestion').show();
+              $('#guest1').hide();
+              $('#guest2').hide();
+              $('#guest3').hide();
+              $('#guest4').hide();
+              $('#guest5').hide();
+              $('#email-form').hide();
+              $('#sub-button').show();
               break;
             case "none":
               $('#divQuestion').hide();
-              $('#no-button').hide();
               break
           }
         });
@@ -832,9 +836,6 @@
                             <button class="btn-fill rsvp-btn" id="sub-button" style="display:none;">
                                 Yes,
                                 that's me!
-                            </button>
-                            <button class="btn-fill" id="no-button" style="display:none;">
-                                Submit
                             </button>
                         </form>
                     </div>
