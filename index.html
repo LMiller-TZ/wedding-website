@@ -71,10 +71,10 @@
 
     <script type='text/javascript'>
     $(document).ready(function() {
-        $("input:number[name=invite_code_validation]").click(function() {
-          var selection = $("#invite_code").val();
+        function codeCheck(val) {
+          //var selection = $("#invite_code").val();
           // var selection = $('input[type=number][name=invite_code_validation]').val();
-          if( selection = 1234) {
+          if( val = "1234") {
               $('#guest1').show();
               $("#guest1").attr('required', '');
               $('#guest2').hide();
@@ -84,7 +84,7 @@
               $('#email-form').show();
               $("#email-form").attr('required', '');
               $('#sub-button').show();
-            } else if( selection = 2345) {
+            } else if( val = "2345") {
               $('#guest1').show();
               $("#guest1").attr('required', '');
               $('#guest2').show();
@@ -94,7 +94,7 @@
               $('#email-form').show();
               $("#email-form").attr('required', '');
               $('#sub-button').show();
-            } else if( selection = 3456) {
+            } else if( val = "3456") {
               $('#guest1').show();
               $("#guest1").attr('required', '');
               $('#guest2').show();
@@ -104,7 +104,7 @@
               $('#email-form').show();
               $("#email-form").attr('required', '');
               $('#sub-button').show();
-            } else if( selection = 4567) {
+            } else if( val = "4567") {
               $('#guest1').show();
               $("#guest1").attr('required', '');
               $('#guest2').show();
@@ -114,7 +114,7 @@
               $('#email-form').show();
               $("#email-form").attr('required', '');
               $('#sub-button').show();
-            } else if( selection = 5678) {
+            } else if( val = "5678") {
               $('#guest1').show();
               $('#guest2').show();
               $('#guest3').show();
@@ -750,7 +750,7 @@
                                             <i class="fa fa-key"></i><input name="invite_code_validation" id="invite_code"
                                                                             class=""
                                                                             placeholder="Invite code"
-                                                                            required>
+                                                                            required onkeydown="codeCheck(this.value)">
                                         </div>
                                     </div>
                                     <div class="col-md-3 col-sm-3">
