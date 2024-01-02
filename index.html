@@ -66,6 +66,8 @@
               break;
             case "no":
               $('#divQuestion').hide();
+              document.getElementById('modalText').innerHTML = noText;
+              document.getElementById('sub-button').innerHTML = "Submit";
               break;
             case "none":
               $('#divQuestion').hide();
@@ -817,7 +819,7 @@
                             <div class="row">
                                 <div class="col-md-12" id="alert-wrapper"></div>
                             </div>
-                            <button class="btn-fill rsvp-btn" id="sub-button" style="display:none;">
+                            <button class="btn-fill rsvp-btn" id="sub-button">
                                 Yes,
                                 that's me!
                             </button>
