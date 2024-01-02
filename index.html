@@ -61,26 +61,11 @@
           switch (selection) {
             case "yes":
               $('#divQuestion').show();
-              $("#invite_code").attr('required', '');
-              $("#radio11").attr('required', '');
               document.getElementById('modalText').innerHTML = yesText;
               document.getElementById('sub-button').innerHTML = "Yes, that's me!";
               break;
             case "no":
-              $('#divQuestion').show();
-              document.getElementById("invite_code").removeAttribute("required");
-              document.getElementById("radio11").removeAttribute("required");
-              $('#rehearsalQuestion').hide();
-              $('#code-enter').hide();
-              $('#guest1').hide();
-              $('#guest2').hide();
-              $('#guest3').hide();
-              $('#guest4').hide();
-              $('#guest5').hide();
-              $('#email-form').hide();
-              $('#sub-button').show();
-              document.getElementById('modalText').innerHTML = noText;
-              document.getElementById('sub-button').innerHTML = "Submit";
+              $('#divQuestion').hide();
               break;
             case "none":
               $('#divQuestion').hide();
