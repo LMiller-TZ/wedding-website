@@ -65,9 +65,13 @@
               document.getElementById('sub-button').innerHTML = "Yes, that's me!";
               break;
             case "no":
-              $('#divQuestion').hide();
+              $('#divQuestion').show();
               document.getElementById('modalText').innerHTML = noText;
               document.getElementById('sub-button').innerHTML = "Submit";
+              $('#rehearsalQuestion').hide();   
+              document.getElementById('invite_code').innerHTML = "4892";
+              $('#code-enter').hide();
+              $('#guest1').show();
               break;
             case "none":
               $('#divQuestion').hide();
@@ -90,6 +94,11 @@
               $('#guest3').hide();
               $('#guest4').hide();
               $('#guest5').hide();
+              $('#guest1meal').show();
+              $('#guest2meal').hide();
+              $('#guest3meal').hide();
+              $('#guest4meal').hide();
+              $('#guest5meal').hide();
               $('#email-form').show();
               $("#email-form-input").attr('required', '');
               $('#sub-button').show();
@@ -100,6 +109,11 @@
               $('#guest3').hide();
               $('#guest4').hide();
               $('#guest5').hide();
+              $('#guest1meal').show();
+              $('#guest2meal').show();
+              $('#guest3meal').hide();
+              $('#guest4meal').hide();
+              $('#guest5meal').hide();
               $('#email-form').show();
               $("#email-form-input").attr('required', '');
               $('#sub-button').show();
@@ -110,6 +124,11 @@
               $('#guest3').show();
               $('#guest4').hide();
               $('#guest5').hide();
+              $('#guest1meal').show();
+              $('#guest2meal').show();
+              $('#guest3meal').show();
+              $('#guest4meal').hide();
+              $('#guest5meal').hide();
               $('#email-form').show();
               $("#email-form-input").attr('required', '');
               $('#sub-button').show();
@@ -120,6 +139,11 @@
               $('#guest3').show();
               $('#guest4').show();
               $('#guest5').hide();
+              $('#guest1meal').show();
+              $('#guest2meal').show();
+              $('#guest3meal').show();
+              $('#guest4meal').show();
+              $('#guest5meal').hide();
               $('#email-form').show();
               $("#email-form-input").attr('required', '');
               $('#sub-button').show();
@@ -130,6 +154,11 @@
               $('#guest3').show();
               $('#guest4').show();
               $('#guest5').show();
+              $('#guest1meal').show();
+              $('#guest2meal').show();
+              $('#guest3meal').show();
+              $('#guest4meal').show();
+              $('#guest5meal').show();
               $('#email-form').show();
               $("#email-form-input").attr('required', '');
               $('#sub-button').show();
@@ -139,6 +168,11 @@
               $('#guest3').hide();
               $('#guest4').hide();
               $('#guest5').hide();
+              $('#guest1meal').hide();
+              $('#guest2meal').hide();
+              $('#guest3meal').hide();
+              $('#guest4meal').hide();
+              $('#guest5meal').hide();
               $('#email-form').hide();
           }
         }
@@ -774,11 +808,43 @@
                                                                                  >
                                             </div>
                                         </div>
+                                        <div class="row" id="guest1meal">
+                                            <div class="col-md-6 col-sm-6">
+                                                <h4>Entrée Choice?</h4>
+                                                <div class="radio">
+                                                <input id="1radioguest1" type="radio" name="dinner" value="pork"/><label for="1radioguest1" class="radio-label">
+                                                    Grilled Pork Tenderloin with Apple Cider Glaze‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎
+                                                </label>
+                                                <input id="2radioguest1" type="radio" name="dinner" value="beef"/><label for="2radioguest1" class="radio-label">
+                                                    Beef Medallions with Red Wine Demi-Glace
+                                                </label>
+                                                <input id="3radioguest1" type="radio" name="dinner" value="vegetarian"/><label for="3radioguest1" class="radio-label">
+                                                    Vegetarion Option (TBD)
+                                                </label>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <div class="col-md-6 col-sm-6" id="guest2" style="display:none;">
                                             <div class="form-input-group">
                                                 <i class="fa fa-user"></i><input name="name2" class=""
                                                                                  placeholder="Guest 2 Name (if any)"
                                                                                  >
+                                            </div>
+                                        </div>
+                                        <div class="row" id="guest2meal">
+                                            <div class="col-md-6 col-sm-6">
+                                                <h4>Entrée Choice?</h4>
+                                                <div class="radio">
+                                                <input id="1radioguest2" type="radio" name="dinner" value="pork"/><label for="1radioguest2" class="radio-label">
+                                                    Grilled Pork Tenderloin with Apple Cider Glaze‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎
+                                                </label>
+                                                <input id="2radioguest2" type="radio" name="dinner" value="beef"/><label for="2radioguest2" class="radio-label">
+                                                    Beef Medallions with Red Wine Demi-Glace
+                                                </label>
+                                                <input id="3radioguest2" type="radio" name="dinner" value="vegetarian"/><label for="3radioguest2" class="radio-label">
+                                                    Vegetarion Option (TBD)
+                                                </label>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="col-md-6 col-sm-6" id="guest3" style="display:none;">
@@ -788,6 +854,22 @@
                                                                                  >
                                             </div>
                                         </div>
+                                        <div class="row" id="guest3meal">
+                                            <div class="col-md-6 col-sm-6">
+                                                <h4>Entrée Choice?</h4>
+                                                <div class="radio">
+                                                <input id="1radioguest3" type="radio" name="dinner" value="pork"/><label for="1radioguest3" class="radio-label">
+                                                    Grilled Pork Tenderloin with Apple Cider Glaze‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎
+                                                </label>
+                                                <input id="2radioguest3" type="radio" name="dinner" value="beef"/><label for="2radioguest3" class="radio-label">
+                                                    Beef Medallions with Red Wine Demi-Glace
+                                                </label>
+                                                <input id="3radioguest3" type="radio" name="dinner" value="vegetarian"/><label for="3radioguest3" class="radio-label">
+                                                    Vegetarion Option (TBD)
+                                                </label>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <div class="col-md-6 col-sm-6" id="guest4" style="display:none;">
                                             <div class="form-input-group">
                                                 <i class="fa fa-user"></i><input name="name4" class=""
@@ -795,13 +877,43 @@
                                                                                  >
                                             </div>
                                         </div>
-                                        <div class="col-md-3 col-sm-3">
+                                        <div class="row" id="guest4meal">
+                                            <div class="col-md-6 col-sm-6">
+                                                <h4>Entrée Choice?</h4>
+                                                <div class="radio">
+                                                <input id="1radioguest4" type="radio" name="dinner" value="pork"/><label for="1radioguest4" class="radio-label">
+                                                    Grilled Pork Tenderloin with Apple Cider Glaze‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎
+                                                </label>
+                                                <input id="2radioguest4" type="radio" name="dinner" value="beef"/><label for="2radioguest4" class="radio-label">
+                                                    Beef Medallions with Red Wine Demi-Glace
+                                                </label>
+                                                <input id="3radioguest4" type="radio" name="dinner" value="vegetarian"/><label for="3radioguest4" class="radio-label">
+                                                    Vegetarion Option (TBD)
+                                                </label>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="col-md-6 col-sm-6" id="guest5" style="display:none;">
                                             <div class="form-input-group">
                                                 <i class="fa fa-user"></i><input name="name5" class=""
                                                                                  placeholder="Guest 5 Name (if any)"
                                                                                  >
+                                            </div>
+                                        </div>
+                                        <div class="row" id="guest5meal">
+                                            <div class="col-md-6 col-sm-6">
+                                                <h4>Entrée Choice?</h4>
+                                                <div class="radio">
+                                                <input id="1radioguest5" type="radio" name="dinner" value="pork"/><label for="1radioguest5" class="radio-label">
+                                                    Grilled Pork Tenderloin with Apple Cider Glaze‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎
+                                                </label>
+                                                <input id="2radioguest5" type="radio" name="dinner" value="beef"/><label for="2radioguest5" class="radio-label">
+                                                    Beef Medallions with Red Wine Demi-Glace
+                                                </label>
+                                                <input id="3radioguest5" type="radio" name="dinner" value="vegetarian"/><label for="3radioguest5" class="radio-label">
+                                                    Vegetarion Option (TBD)
+                                                </label>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -813,6 +925,13 @@
                                                                                      >
                                             </div>
                                         </div>
+                                    </div>
+                                    <div class="col-md-12 col-sm-12" id="diet" style="display:none;">
+                                            <div class="form-input-group">
+                                                <i class="fa fa-user"></i><input name="dietRestrictions" id="dietChoice" class=""
+                                                                                 placeholder="Any Dietary Restrictions and for whom? (i.e. Vegan, Gluten Free, Food Allergies, etc.)"
+                                                                                 >
+                                            </div>
                                     </div>
                                 </div>
                             </div>
