@@ -61,6 +61,9 @@
           switch (selection) {
             case "yes":
               $('#divQuestion').show();
+              document.getElementById('invite_code').innerHTML = "";
+              $('#rehearsalQuestion').show();  
+              $('#code-enter').show(); 
               document.getElementById('modalText').innerHTML = yesText;
               document.getElementById('sub-button').innerHTML = "Yes, that's me!";
               break;
