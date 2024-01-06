@@ -61,7 +61,7 @@
           switch (selection) {
             case "yes":
               $('#divQuestion').show();
-              document.getElementById('invite_code').innerHTML = "";
+              document.getElementById('invite_code').placeholder = "Invite code";
               $('#rehearsalQuestion').show();  
               $('#code-enter').show();
               document.getElementById('inp').placeholder = "Guest 1 Name";
@@ -742,7 +742,7 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
                     </button>
                     <div class="section-padding">
-                        <h3>Thank you <span id="lblValue"></span></h3>
+                        <h3>Thank you <span id="lblValue"></span>!</h3>
                         <p id="modalText"></p>
                         <div id="add-to-cal"></div>
                     </div>
