@@ -1,0 +1,1021 @@
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Luke & Ali are getting married!</title>
+    <meta name="description" content="We would like to invite you to our big day.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff">
+    <meta property="og:title" content="Luke & Ali are getting married">
+    <meta property="og:description" content="We would like to invite you to our big day.">
+    <meta property="og:image" content="https://lukeandali.com/img/hero-min.jpg">
+    <meta property="og:type" content="website">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        // load css files from CDN if local node_modules fail
+        function loadCssFromCDN(css) {
+            // create new link tag
+            const link = document.createElement('link');
+            if (css === 'animate.css') {
+                link.href = 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css';
+            } else if (css === 'font-awesome.css') {
+                link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css';
+            }
+            link.rel = 'stylesheet';
+
+            // add link tag to head section
+            document.getElementsByTagName('head')[0].appendChild(link);
+        }
+
+        // load js files from CDN if local node_modules fail
+        function loadJsFromCDN(js) {
+            if (js === 'waypoints.js') {
+                document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"><\/script>');
+            } else if (js === 'jquery.js') {
+                document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"><\/script>');
+            }
+        }
+    </script>
+    <script type='text/javascript'>
+    $(document).ready(function() {
+        $("input:radio[name=choice]").click(function() {
+          var selection;
+          var noText;
+          var yesText;
+          noText = "We're sorry to hear you can't make it but thank you so much for letting us know!";
+          yesText = "We are thrilled that you can join us on our big day.<br> At your earliest convenience, please call The Retreat at Balcones Springs at <b>(830)693-6639</b> to reserve your room and complete the rsvp process.";
+          selection = $("input:radio[name=choice]:checked").val()
+          switch (selection) {
+            case "yes":
+              $('#divQuestion').show();
+              document.getElementById('invite_code').value = "";
+              $('#rehearsalQuestion').show();  
+              $('#code-enter').show();
+              document.getElementById('inp').placeholder = "Guest 1 Name";
+              $('#guest1').hide();
+              document.getElementById('modalText').innerHTML = yesText;
+              $('#590671').hide();
+              document.getElementById('sub-button').innerHTML = "Yes, that's me!";
+              break;
+            case "no":
+              $('#divQuestion').show();
+              document.getElementById('modalText').innerHTML = noText;
+              $('#590671').hide();
+              document.getElementById('inp').placeholder = "Your name";
+              document.getElementById('sub-button').innerHTML = "Submit";
+              $('#rehearsalQuestion').hide();   
+              document.getElementById('invite_code').value = 4892;
+              $('#code-enter').hide();
+              $('#guest1').show();
+              break;
+            case "none":
+              $('#divQuestion').hide();
+              $('#sub-button').hide();
+              break
+          }
+        });
+    });
+    </script>
+
+    <script type='text/javascript'>
+    //$(document).ready(function() {
+        function codeCheck(val) {
+          //var selection = $("#invite_code").val();
+          // var selection = $('input[type=number][name=invite_code_validation]').val();
+          if( val == 4892) {
+              $('#guest1').show();
+              $("#inp").attr('required', '');
+              $('#guest2').hide();
+              $('#guest3').hide();
+              $('#guest4').hide();
+              $('#guest5').hide();
+              $('#guest1meal').show();
+              $('#guest2meal').hide();
+              $('#guest3meal').hide();
+              $('#guest4meal').hide();
+              $('#guest5meal').hide();
+              $('#email-form').show();
+              $("#email-form-input").attr('required', '');
+              $('#sub-button').show();
+            } else if( val == 6895) {
+              $('#guest1').show();
+              $("#inp").attr('required', '');
+              $('#guest2').show();
+              $('#guest3').hide();
+              $('#guest4').hide();
+              $('#guest5').hide();
+              $('#guest1meal').show();
+              $('#guest2meal').show();
+              $('#guest3meal').hide();
+              $('#guest4meal').hide();
+              $('#guest5meal').hide();
+              $('#email-form').show();
+              $("#email-form-input").attr('required', '');
+              $('#sub-button').show();
+            } else if( val == 8926) {
+              $('#guest1').show();
+              $("#inp").attr('required', '');
+              $('#guest2').show();
+              $('#guest3').show();
+              $('#guest4').hide();
+              $('#guest5').hide();
+              $('#guest1meal').show();
+              $('#guest2meal').show();
+              $('#guest3meal').show();
+              $('#guest4meal').hide();
+              $('#guest5meal').hide();
+              $('#email-form').show();
+              $("#email-form-input").attr('required', '');
+              $('#sub-button').show();
+            } else if( val == 3658) {
+              $('#guest1').show();
+              $("#inp").attr('required', '');
+              $('#guest2').show();
+              $('#guest3').show();
+              $('#guest4').show();
+              $('#guest5').hide();
+              $('#guest1meal').show();
+              $('#guest2meal').show();
+              $('#guest3meal').show();
+              $('#guest4meal').show();
+              $('#guest5meal').hide();
+              $('#email-form').show();
+              $("#email-form-input").attr('required', '');
+              $('#sub-button').show();
+            } else if( val == 5264) {
+              $('#guest1').show();
+              $("#inp").attr('required', '');
+              $('#guest2').show();
+              $('#guest3').show();
+              $('#guest4').show();
+              $('#guest5').show();
+              $('#guest1meal').show();
+              $('#guest2meal').show();
+              $('#guest3meal').show();
+              $('#guest4meal').show();
+              $('#guest5meal').show();
+              $('#email-form').show();
+              $("#email-form-input").attr('required', '');
+              $('#sub-button').show();
+            } else {
+              $('#guest1').hide();
+              $('#guest2').hide();
+              $('#guest3').hide();
+              $('#guest4').hide();
+              $('#guest5').hide();
+              $('#guest1meal').hide();
+              $('#guest2meal').hide();
+              $('#guest3meal').hide();
+              $('#guest4meal').hide();
+              $('#guest5meal').hide();
+              $('#email-form').hide();
+          }
+        }
+    //});
+    </script>
+    
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
+    <link rel="stylesheet" href="css/flexslider.css">
+    <link rel="stylesheet" href="css/styles.min.css">
+    <link rel="stylesheet" href="css/queries.css">
+    <link rel="stylesheet" href="node_modules/animate.css/animate.min.css" onerror="loadCssFromCDN('animate.css')">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" onerror="loadCssFromCDN('font-awesome.css')">
+</head>
+<body id="top">
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
+    your browser</a> to be able to view our wedding website! Or visit from another device?</p>
+<![endif]-->
+<section class="hero">
+    <section class="navigation">
+        <header>
+            <div class="header-content">
+                <div class="logo"><a href="#"><img src="img/logo.png" alt="Logo"></a></div>
+                <div class="header-nav">
+                    <nav>
+                        <ul class="primary-nav">
+                            <li><a href="#texas">Why Texas?</a></li>
+                            <li><a href="#events">Events</a></li>
+                            <li><a href="#instagram">Instagram</a></li>  
+                            <li class="hidden-sm hidden-xs"><a href="#map">Location</a></li>
+                            <li><a href="#intro">How We Met</a></li>
+                            <li><a href="#eng-pics">Photos</a></li>
+                        </ul>
+                        <ul class="member-actions">
+                            <li><a href="#map" class="login">Venue</a></li>
+                            <li><a href="#rsvp" class="btn-white btn-small">RSVP</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="navicon">
+                    <a class="nav-toggle" href="#"><span></span></a>
+                </div>
+            </div>
+        </header>
+    </section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="hero-content text-center">
+                    <!--<h1>Luke and Ali</h1>-->
+                    <img src="img/logo-lg.png">
+                    <p class="intro">Luke & Ali are getting married!</p>
+                    <a href="#rsvp" class="btn btn-fill btn-large btn-margin-bottom">RSVP</a>
+                </div>
+            </div>
+        </div>
+<!--         <div class="row">
+            <div class="col-sm-4 hidden-xs"></div>
+            <div class="col-sm-4 hidden-xs text-center"><a href="#rsvp" class="btn btn-accent btn-large rsvp-btn">RSVP</a></div>
+            <div class="col-sm-4 hidden-xs"></div>
+        </div> -->
+    </div>
+    <div class="down-arrow floating-arrow"><a href="#invitation"><i class="fa fa-angle-down"></i></a></div>
+</section>
+    
+<section id="invitation" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3>When?</h3>
+                <p>The dates are April 5<sup>th</sup> - 7<sup>th</sup>, 2024 and we would love for you to be a part of
+                    it!</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="video-bg" class="hidden-sm hidden-xs">
+    <div id="bgndVideo" class="player"
+         data-property="{videoURL:'https://youtu.be/CP6yeIr4rAk',containment:'#video-bg', loop:5000, autoPlay:true, stopMovieOnBlur: false, mute:true, showControls:false, showYTLogo:false, opacity:1}">
+    </div>
+    <div id="video-content">
+        <h5>Balcones Springs</h5>
+        <p>Camp Away!</p>
+    </div>
+</section>
+
+<section id="texas" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3>Why Texas?</h3>
+                <p style="padding-bottom: 0px;">We went through our guest list and found out 75% or more of our guests would have to travel over multiple state lines <i>regardless</i> of where our wedding was because of 
+                    how spread out our friends and family are. So we wanted to pick a venue that would make your travel & time worth it! 
+                    Here are a few reasons why you will want to come for the entire weekend:</p>
+                    <ul style="list-style:disc; text-align: left; padding-left: 60px; padding-bottom: 15px;">
+                        <li style="list-style:disc;">Open bars all weekend!</li>
+                        <li style="list-style:disc;">Stay in a house on the property, no need to worry about driving/Ubering after a night of partying!</li>
+                        <li style="list-style:disc;">Lake activites - Blob, canoeing, kayaking, stand up paddle boarding, sand volleyball, rope swings, waterslide, beach (yes, nonstop beach offs)</li>
+                        <li style="list-style:disc;">Sporting activites - Zip Line over the lake, 18-hole frisbee golf course, skeet shooting, axe throwing, archery, baseball diamond, pickleball, gaga ball, basketball, tennis courts, fishing</li>
+                        <li style="list-style:disc;">Miles of hiking, jogging, and biking trails</li>
+                        <li style="list-style:disc;">Live Band Karaoke</li>
+                        <li style="list-style:disc;">Cabin Wars</li>
+                        <li style="list-style:disc;">Meals included in stay</li>
+                    </ul>
+                <p>The only things you should have to pay for the entire trip is your flight, your transportation to the venue, and your room. We have everything else covered! 
+                </p>
+                <div class="row section-padding section-border">
+                    <div class="col-md-4 col-md-offset-4 text-center">
+                        <a class="btn btn-accent btn-small fancybox"" rel="group1" href="img/activities/blob.jpg">
+                            <i class="fa fa-barcode"></i>&nbsp;&nbsp;Activities Gallery
+                        </a>
+                    </div>
+                </div>
+
+                <div id="activities-pictures">
+                                <a class="fancybox" rel="group1" href="img/activities/volleyball1.jpg">
+                                </a>
+                                <a class="fancybox" rel="group1" href="img/activities/axe.jpeg">
+                                </a>
+                                <a class="fancybox" rel="group1" href="img/activities/inflatables.jpeg">
+                                </a>
+                                <a class="fancybox" rel="group1" href="img/activities/beach1.jpg">
+                                </a>
+                                <a class="fancybox" rel="group1" href="img/activities/blob2.jpeg">
+                                </a>
+                                <a class="fancybox" rel="group1" href="img/activities/pickleball1.jpeg">
+                                </a>
+                                <a class="fancybox" rel="group1" href="img/activities/kayak.jpg">
+                                </a>
+                                <a class="fancybox" rel="group1" href="img/activities/zipline.jpg">
+                                </a>
+                                <a class="fancybox" rel="group1" href="img/activities/pickleball2.jpeg">
+                                </a>
+                                <a class="fancybox" rel="group1" href="img/activities/beach2.jpeg">
+                                </a>
+                                <a class="fancybox" rel="group1" href="img/activities/fitness.jpg">
+                                </a>
+                                <a class="fancybox" rel="group1" href="img/activities/cornhole.jpg">
+                                </a>
+                                <a class="fancybox" rel="group1" href="img/activities/fishing.jpeg">
+                                </a>
+                 </div>
+                
+                <h3>Accommodations</h3>
+                <p>Balcones Springs offers cozy cabins & bungalows grouped together across the property. Think glamping. 
+                    Each cabin is uniquely decorated and all feature TempurPedic mattress toppers, adjustable A/C and heating, refrigerators, toiletries, WiFi access points, and en-suite bathroom. 
+                    The cabins can sleep 4-6 guests in twins or king size beds.  </p>
+                <div class="row section-padding">
+                    <div class="col-md-4 col-md-offset-4 text-center">
+                        <a class="btn btn-accent btn-small fancybox"" rel="group2" href="img/accommodations/cabin1.jpg">
+                            <i class="fa fa-barcode"></i>&nbsp;&nbsp;Cabins Gallery
+                        </a>
+                    </div>
+                </div>
+
+                <div id="accommodations-pictures">
+                    <a class="fancybox" rel="group2" href="img/accommodations/cabin2.jpg"></a>
+                    <a class="fancybox" rel="group2" href="img/accommodations/cabin3.jpg"></a>
+                    <a class="fancybox" rel="group2" href="img/accommodations/cabin4.jpg"></a>
+                    <a class="fancybox" rel="group2" href="img/accommodations/cabin5.jpg"></a>
+                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+    
+
+
+<section class="events section-padding" id="events">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="header">Events</h3>
+            </div>
+        </div>
+        <div class="row" style="padding-bottom: 30px;">
+            <div class="col-md-6 col-sm-12 col-xs-12 leftcol" style="border-right:none">
+                <div class="wp3">
+                    <p><strong>April 4th</strong></p>
+                    <h5>Check In  <span class="time">3PM-7PM</span></h5>
+                </div>
+                <div class="wp5">
+                    <h5>Welcome Bar & Refreshments  <span class="time">5:30PM</span></h5>
+                </div>
+                <div class="wp5">
+                    <h5>Wedding Party Rehearsal & Walkthrough  <span class="time">5:30PM</span></h5>
+                </div>
+                <div class="wp5">
+                    <h5>Rehearsal Dinner  <span class="time">7PM - 8PM</span></h5>
+                    <p>Cocktail Attire</p>
+                </div>
+                <div class="wp5">
+                    <h5>Welcome Party  <span class="time">8PM - 12AM</span></h5>
+                    <p>The bride & groom would like to have some "shots before the
+                        knot".</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12 rightcol" style="border-left: solid 1px #e6e9ea;">
+                <div class="wp4">
+                    <p><strong>April 5th</strong></p>
+
+                    <h5>Breakfast  <span class="time">8:30AM-9:30AM</span></h5>
+                </div>
+                <div class="wp4">
+                    <h5>Check In  <span class="time">11AM-5PM</span></h5>
+                    <p>You have this time to explore and utilize any of the properties amenities</p>
+                </div>
+                <div class="wp4">
+                    <h5>Lunch  <span class="time">12:30PM-1:30PM</span></h5>
+                </div>
+                <div class="wp6">
+                    <h5>Seating Begins  <span class="time">5:00PM</span></h5>
+                    <p>Formal Dress. The ceremony will start promptly at 5:30.</p>
+                </div>
+                <div class="wp6">
+                    <h5>Ceremony  <span class="time">5:30PM-6PM</span></h5>
+                    <p>Formal Dress. The ceremony will start promptly at 5:30.</p>
+                </div>
+                <div class="wp6">
+                    <h5>Cocktail Hour  <span class="time">6:00PM-7:00PM</span></h5>
+                    <p>While we take pictures, please enjoy the food,
+                    drinks, and friends until we sit down!</p>
+                </div>
+                <div class="wp6">
+                    <h5>Reception  <span class="time">7:00PM-2AM+</span></h5>
+                    <p>Dinner, Dancing, & Booze! Bring your best dancing shoes because the bride & groom want to party all night long.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-sm-12 col-xs-12 leftcol" style="margin-bottom: 30px;">
+                <div class="wp3">
+                    <p><strong>April 6th</strong></p>
+                </div>
+                <div class="wp5">
+                    <h5>Breakfast  <span class="time">9:30AM - 10:30AM</span></h5>
+                </div>
+                <div class="wp5">
+                    <h5>Cabin Wars  <span class="time">10AM - 3PM</span></h5>
+                    <p>Competition between cabin blocks across various games & activities for those who want to join. Similar to how we met (on a cruise), there will be a "cruise itenerary" with different events throughout the day.</p>
+                </div>
+                <div class="wp5">
+                    <h5>Open Swim & Lake Activities  <span class="time">3PM - 6PM</span></h5>
+                    <p>After an eventful sporting day, what better way to cool off than in a lake! *Water levels permitting*, there will be a blob available to launch into the lake. Other activities include kayaking, inflatable water obstacle courses, ziplining over the lake, volleyball, rope swing, waterslide, and just relaxing on the sand.</p>
+                </div>
+                <div class="wp5">
+                    <h5>Live Band Karaoke  <span class="time">8PM - 11PM</span></h5>
+                    <p style="padding-bottom:10px;">I, Luke, frequented a bar in Atlanta where they did this weekly and wanted to bring the same vibe to our wedding! With over 300 songs to choose from, you'll have the chance to 
+                        sing with a backing live band and with the friends you've made throughout the weekend. As intimidating as it might seem, it's not like typical karaoke where one or two people sing on stage alone and the crowd watches idly... everyone will be singing and dancing 
+                        alongside you like a rock concert. And the backup singer(s) will jump in to help if you get nervous or lose your place! </p>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12 rightcol">
+                <div class="wp4">
+                    <p><strong>April 7th</strong></p>
+
+                    <h5>Check Out  <span class="time">11AM</span></h5>
+                    <p>Make sure you have rides to the airport coordinated ahead of time</p>
+            </div>
+        </div>
+        
+        <div class="row section-padding">
+            <div class="col-md-4 col-md-offset-4 text-center">
+                <a class="btn btn-accent btn-small" data-toggle="modal" data-target="#dc-modal">
+                    <i class="fa fa-barcode"></i>&nbsp;&nbsp;Dress code
+                </a>
+            </div>
+        </div>
+        <!--<div class="row">
+            <div class="col-xs-12 section-border section-padding">
+            </div>
+        </div>-->
+    </div>
+
+    <div id="dc-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
+                    </button>
+                    <h3 class="text-center section-padding">Dress codes</h3>
+                    <h5>The Ceremony <span class="time">Friday, April 5th</span></h5>
+                    <p>
+                        <strong>Formal</strong>
+                        <br>
+                        <a href="https://www.pinterest.com/heathergiza6/formal-wedding-attire-menwomen/" target="_blank">Here</a>
+                        are some ideas to help you get started if you're stuck.
+                    </p>
+                    <h5>Dress Rehearsal <span class="time">Thursday, April 4th</span></h5>
+                    <p>
+                        <strong>Cocktail</strong>
+                        <br>
+                        You can see some pins for
+                        <a href="https://www.pinterest.com/turtlemeadow/semi-formal-wedding/" target="_blank">ladies</a>
+                        & <a href="https://www.pinterest.com/yourcoloryourst/semi-formal-men/" target="_blank">gents</a>.
+                    </p>
+                    <h5>Cabin Wars!!! <span class="time">Saturday, April 6th</span></h5>
+                    <p>
+                        <strong>Team Athletic Attire</strong>
+                        <br>
+                        During the day after our wedding we are holding a cabin wars gameday with various competitions where each cabin will be on a team competing for glory! When you RSVP the assistant at Balcones Springs
+                        will let you know what color team you are on. Make sure to pack a shirt/top that matches that color. We will send a reminder text shortly before the wedding but you can always reach out to Luke at (615)-342-9319
+                        to ask what color team you are on if you forget.
+                    </p>
+                    <h5>Live Band Karaoke <span class="time">Saturday, April 6th</span></h5>
+                    <p>
+                        <strong>Mojo Dojo Casa House vs. Barbie's Dreamhouse</strong>
+                        <br>
+                        Pick a side to rock out with for the night! Mojo Dojo Casa House can be more than just Kenland outfits from the Barbie movie, it can be western/cowboy attire! Same goes for Barbie's Dreamhouse, you don't have to just
+                        wear pink to be "Barbie". You can go for an 80's neon outfit, disco theme, or more! Feel free to get creative with it and if you don't feel like packing anything for this, we'll have props for you &#128521. You 
+                        can see some pins <a href="https://www.pinterest.com/delaneygmiller/barbie-vs-mojo-dojo-casa-house/" target="_blank">here</a> for inspiration and ideas.
+                    </p>
+                    <h5>Weekend Retreat! <span class="time">Thursday-Sunday</span></h5>
+                    <p>
+                        <strong>Casual & Comfy</strong>
+                        <br>
+                        Wear what you would find comfortable to do campground activities in! Throughout the weekend you could find yourself
+                        swimming, hiking, lounging, throwing axes, shooting clays, playing basketball, tennis, or kickball. Expect to be outdoors at
+                        nights for campfires and bonfires as well.
+                    </p>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+</section>
+
+<section id="instagram" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3>We have an Instagram account!</h3>
+                <p>Help us capture the moment on our weekend by tagging our wedding account, 
+                    <a href="https://www.instagram.com/luliwedding/" target="_blank">@LuliWedding</a>, in any pictures or
+                    stories you post! We will repost stories to our account all weekend and any pictures you post with us <a href="https://www.instagram.com/luliwedding/tagged/?hl=en" target="_blank">tagged</a>
+                    will be in one place. Follow our account for any posts between now and our wedding.
+                </p>
+            </div>
+        </div>
+        <div class="row section-border wp7">
+            <div class="col-md-4 col-md-offset-4">
+                <img src="img/iphone_instagram.jpg">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="map" class="section-padding section-border">
+     <div class="container">
+        <div class="row">
+            <div class="text-center col-md-12">
+                <h3>How do I get there?</h3>
+                    <br>The retreat is an hour from the airport. Once you get there you will not need to leave again so while you don't need a rental car, having one will make the return trip to the airport much easier since Ubers/Lyfts are not readily available.
+                <br><br>Want to carpool? <a href="https://docs.google.com/spreadsheets/d/1PPKHSG1FZtsZRj5-En0PrrjaQNgfN2yW4t4ZdjBsYX0/edit?usp=sharing">Here</a> is a spreadsheet for those interested in coordinating rides to the venue upon arrival.
+                 Once flights have been booked, you can find others landing at a similar time to split the cost of rental & gas. 
+                    <br><br>Below is a pre-configured Uber trip showing an estimate for the cost. </p>
+            </div>
+            <div id="map-canvas"></div>
+            <div id="map-content-wrapper" class="container pointer-events-none">
+                <div class="row">
+                    <div class="col-xs-offset-1 col-xs-10 col-md-offset-3 col-md-6">
+                        <div class="text-center">
+                            <div id="btn-show-content" class="toggle-map-content pointer-events-auto">
+                                <i class="fa fa-info-circle"></i>&nbsp;&nbsp; Show info
+                            </div>
+                        </div>
+                        <div id="map-content" class="pointer-events-auto">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5>The Retreat at Balcones Springs</h5>
+                                    <p>104 Balcones Springs Dr, Marble Falls, TX 78654</p>
+                                </div>
+                            </div>
+                            <div class="row text-center">
+                                <div class="col-md-6" style="padding: 5px;">
+                                    <a class="btn btn-fill btn-small"
+                                       href="https://m.uber.com/ul/?client_id=R4dpePR56EG3DGRohcONpvDnyf6H2Ykc&action=setPickup&pickup[latitude]=30.201990&pickup[longitude]=-97.666992&pickup[nickname]=Austin-Bergstrom%20International%20Airport&dropoff[latitude]=30.557970&dropoff[longitude]=-98.115761&dropoff[nickname]=The%20Retreat%20at%20Balcones%20Springs&product_id=a1111c8c-c720-46c3-8534-2fcdd730040d" target="_blank"><i
+                                            class="fa fa-taxi"></i>&nbsp;&nbsp;Book Uber</a>
+                                </div>
+                                <div class="col-md-6" style="padding: 5px;">
+                                    <a class="btn btn-accent btn-small" id="btn-show-map"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Show
+                                        map</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="blankDiv" style="height: 150px;"></div>
+        </div></div>
+</section>
+    
+<section id="intro" class="section-border">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3 class="header">How we met</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 hidden-sm hidden-xs"><img src="img/LukeOutline.png" class="wp1"></div>
+            <div class="col-md-6">
+                <p>
+                    We first met on a cruise back in 2013. On the first day of the cruise I, Luke, nervously walked into the Teens Club and was immediately
+                    greeted by Ali shouting "HEYYY" the second I walked in. Who would've thought the first person I talked to on that ship and the one who
+                    made me feel comfortable in a new, awkward environment would be the person I would fall in love with. Well... not me, at least not right away.
+                    It wasn't until halfway through the cruise where we played Just Dance 2013 together and I instantly felt a chemistry together unlike any I had 
+                    before. I contintued to be oblivious to all the signals she was sending but eventually asked if she "wanted to be official?"... And the rest was history.
+                </p>
+            </div>
+            <div class="col-md-3 hidden-sm hidden-xs"><img src="img/AliOutline.png" class="wp2"></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 col-sm-push-2 col-xs-6 hidden-md hidden-lg"><img src="img/LukeOutline.png" class="wp8"></div>
+            <div class="col-sm-4 col-sm-push-2 col-xs-6 hidden-md hidden-lg"><img src="img/AliOutline.png" class="wp9"></div>
+        </div>
+    </div>
+</section>
+
+<section id="eng-pics" class="section-border section-padding">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3 class="header">Pics throughout the years</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <a class="fancybox" rel="group" href="img/eng_pics/2F4B4C45-69FB-40A6-89DD-D36296C88373.JPG">
+                    <div class="img-wrap">
+                        <div class="overlay">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <img src="img/eng_pics/2F4B4C45-69FB-40A6-89DD-D36296C88373.JPG" alt=""/>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a class="fancybox" rel="group" href="img/eng_pics/20210925_100102.jpg">
+                    <div class="img-wrap">
+                        <div class="overlay">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <img src="img/eng_pics/20210925_100102.jpg" alt=""/>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a class="fancybox" rel="group" href="img/eng_pics/DSC02164.JPG">
+                    <div class="img-wrap">
+                        <div class="overlay">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <img src="img/eng_pics/DSC02164.JPG" alt=""/>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a class="fancybox" rel="group" href="img/eng_pics/DSCF3413-1.JPG">
+                    <div class="img-wrap">
+                        <div class="overlay">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <img src="img/eng_pics/DSCF3413-1.JPG" alt=""/>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a class="fancybox" rel="group" href="img/eng_pics/IMG_1878.JPG">
+                    <div class="img-wrap">
+                        <div class="overlay">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <img src="img/eng_pics/IMG_1878.JPG" alt=""/>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a class="fancybox" rel="group" href="img/eng_pics/IMG_1983.JPG">
+                    <div class="img-wrap">
+                        <div class="overlay">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <img src="img/eng_pics/IMG_1983.JPG" alt=""/>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a class="fancybox" rel="group" href="img/eng_pics/IMG_20171118_141725.jpg">
+                    <div class="img-wrap">
+                        <div class="overlay">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <img src="img/eng_pics/IMG_20171118_141725.jpg" alt=""/>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a class="fancybox" rel="group" href="img/eng_pics/IMG_5139.jpg">
+                    <div class="img-wrap">
+                        <div class="overlay">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <img src="img/eng_pics/IMG_5139.jpg" alt=""/>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a class="fancybox" rel="group" href="img/eng_pics/IMG_7376.JPG">
+                    <div class="img-wrap">
+                        <div class="overlay">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <img src="img/eng_pics/IMG_7376.JPG" alt=""/>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a class="fancybox" rel="group" href="img/eng_pics/IMG_7388.JPG">
+                    <div class="img-wrap">
+                        <div class="overlay">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <img src="img/eng_pics/IMG_7388.JPG" alt=""/>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a class="fancybox" rel="group" href="img/eng_pics/IMG_8569.JPG">
+                    <div class="img-wrap">
+                        <div class="overlay">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <img src="img/eng_pics/IMG_8569.JPG" alt=""/>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a class="fancybox" rel="group" href="img/eng_pics/IMG_8896.JPG">
+                    <div class="img-wrap">
+                        <div class="overlay">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <img src="img/eng_pics/IMG_8896.JPG" alt=""/>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a class="fancybox" rel="group" href="img/eng_pics/PXL_20220525_175125809.MP.jpg">
+                    <div class="img-wrap">
+                        <div class="overlay">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <img src="img/eng_pics/PXL_20220525_175125809.MP.jpg" alt=""/>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row hidden-lg hidden-md hidden-xs">
+            <div class="col-xs-12 section-padding"></div>
+        </div>
+    </div>
+    <!--<div class="row">
+        <div class="col-md-12">
+            <div class="diamond floating-logo">
+                <img src="img/sketch-logo.png" alt="Sketch Logo">
+                <div class="ring"></div>
+            </div>
+        </div>
+    </div>-->
+</section>
+    
+<section class="rsvp text-center" id="rsvp">
+
+    <div id="rsvp-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
+                    </button>
+                    <div class="section-padding">
+                        <h3>Thank you <span id="lblValue"></span>!</h3>
+                        <p id="modalText"></p>
+                        <div id="add-to-cal"></div>
+                    </div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>What are you waiting for?</h3>
+                <p style="padding-bottom:0px;">We would greatly appreciate if you could RSVP before February 5th, '24</p>
+                    <div>
+                        <form id="rsvp-form" class="rsvp-form"
+                              action=""
+                              method="POST">
+                            <div class="row" style="padding-top:10px;">
+                                <div class="col-md-12 col-sm-12" id="rsvp-form-initial">
+                                    <h4>Are you able to attend the wedding?</h4>
+                                    <div class="radio">
+                                    <input id="radio1" type="radio" name="choice" value="yes"/><label for="radio1" class="radio-label">
+                                        Yes‎‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎
+                                    </label>
+                                    <input id="radio2" type="radio" name="choice" value="no"/><label for="radio2" class="radio-label">
+                                        No
+                                    </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="divQuestion" style="display:none;">
+                                <div class="row" id="rehearsalQuestion">
+                                    <div class="col-md-12 col-sm-12">
+                                        <h4>Our dress rehearsal on Thursday, April 4th, is open invite. We need to know 1 month before the wedding how many people are coming so we have the right number of meals. Are you planning on joining us for our dress rehearsal?<!-- While we would love to see everyone early regardless, we know that arriving a day early can be beneficial for some people's schedules too.
+                                        We also understand getting an extra day off work is hard too so we don't expect either choice from anybody. That being said, to get a better headcount, are you planning on coming April 4th for our dress rehearsal? --></h4>
+                                        <div class="radio">
+                                        <input id="radio11" type="radio" name="rehearsal" value="yes"/><label for="radio11" class="radio-label">
+                                            Yes‎‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎
+                                        </label>
+                                        <input id="radio12" type="radio" name="rehearsal" value="no"/><label for="radio12" class="radio-label">
+                                            No
+                                        </label>
+                                        <input id="radio13" type="radio" name="rehearsal" value="unsure"/><label for="radio13" class="radio-label">
+                                            I'm not sure yet. I'll let Luke know by March 4th.
+                                        </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" id="code-enter">
+                                    <div class="col-md-3 col-sm-3">
+                                    </div>
+                                    <div class="col-md-6 col-sm-6">
+                                        <div class="form-input-group">
+                                            <i class="fa fa-key"></i><input type="number" name="invite_code_validation" id="invite_code"
+                                                                            class=""
+                                                                            placeholder="Invite code"
+                                                                            onkeyup="codeCheck(this.value)">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-3">
+                                    </div>
+                                </div>
+                                <div id="postInviteCode">
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-6" id="guest1" style="display:none;">
+                                            <div class="form-input-group">
+                                                <i class="fa fa-user"></i><input name="name" id="inp" onKeyUp="myFun()" onKeyPress="myFun()" class=""
+                                                                                 placeholder="Guest 1 Name"
+                                                                                 >
+                                            </div>
+                                        </div>
+                                        <div class="row section-border" id="guest1meal" style="display:none;">
+                                            <div class="col-md-6 col-sm-6" style="padding-left:5px;padding-right:5px;">
+                                                <h4 style="margin-bottom:0px;margin-top:0px;">Entrée Choice?</h4>
+                                                <div class="radio">
+                                                <input id="1radioguest1" type="radio" name="dinner" value="pork"/><label for="1radioguest1" class="radio-label">
+                                                    Grilled Pork Tenderloin with Apple Cider Glaze‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎
+                                                </label>
+                                                <input id="2radioguest1" type="radio" name="dinner" value="beef"/><label for="2radioguest1" class="radio-label">
+                                                    Beef Medallions with Red Wine Demi-Glace
+                                                </label>
+                                                <input id="3radioguest1" type="radio" name="dinner" value="vegetarian"/><label for="3radioguest1" class="radio-label">
+                                                    Vegetarion Option (TBD)
+                                                </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6" id="guest2" style="display:none;margin-top:10px;">
+                                            <div class="form-input-group">
+                                                <i class="fa fa-user"></i><input name="name2" class=""
+                                                                                 placeholder="Guest 2 Name (if any)"
+                                                                                 >
+                                            </div>
+                                        </div>
+                                        <div class="row section-border" id="guest2meal" style="display:none;">
+                                            <div class="col-md-6 col-sm-6" style="padding-left:5px;padding-right:5px;">
+                                                <h4 style="margin-bottom:0px;">Entrée Choice?</h4>
+                                                <div class="radio">
+                                                <input id="1radioguest2" type="radio" name="dinner" value="pork"/><label for="1radioguest2" class="radio-label">
+                                                    Grilled Pork Tenderloin with Apple Cider Glaze‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎
+                                                </label>
+                                                <input id="2radioguest2" type="radio" name="dinner" value="beef"/><label for="2radioguest2" class="radio-label">
+                                                    Beef Medallions with Red Wine Demi-Glace
+                                                </label>
+                                                <input id="3radioguest2" type="radio" name="dinner" value="vegetarian"/><label for="3radioguest2" class="radio-label">
+                                                    Vegetarion Option (TBD)
+                                                </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6" id="guest3" style="display:none;margin-top:10px;">
+                                            <div class="form-input-group">
+                                                <i class="fa fa-user"></i><input name="name3" class=""
+                                                                                 placeholder="Guest 3 Name (if any)"
+                                                                                 >
+                                            </div>
+                                        </div>
+                                        <div class="row section-border" id="guest3meal" style="display:none;">
+                                            <div class="col-md-6 col-sm-6" style="padding-left:5px;padding-right:5px;">
+                                                <h4 style="margin-bottom:0px;">Entrée Choice?</h4>
+                                                <div class="radio">
+                                                <input id="1radioguest3" type="radio" name="dinner" value="pork"/><label for="1radioguest3" class="radio-label">
+                                                    Grilled Pork Tenderloin with Apple Cider Glaze‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎
+                                                </label>
+                                                <input id="2radioguest3" type="radio" name="dinner" value="beef"/><label for="2radioguest3" class="radio-label">
+                                                    Beef Medallions with Red Wine Demi-Glace
+                                                </label>
+                                                <input id="3radioguest3" type="radio" name="dinner" value="vegetarian"/><label for="3radioguest3" class="radio-label">
+                                                    Vegetarion Option (TBD)
+                                                </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6" id="guest4" style="display:none;margin-top:10px;">
+                                            <div class="form-input-group">
+                                                <i class="fa fa-user"></i><input name="name4" class=""
+                                                                                 placeholder="Guest 4 Name (if any)"
+                                                                                 >
+                                            </div>
+                                        </div>
+                                        <div class="row section-border" id="guest4meal" style="display:none;">
+                                            <div class="col-md-6 col-sm-6" style="padding-left:5px;padding-right:5px;">
+                                                <h4 style="margin-bottom:0px;">Entrée Choice?</h4>
+                                                <div class="radio">
+                                                <input id="1radioguest4" type="radio" name="dinner" value="pork"/><label for="1radioguest4" class="radio-label">
+                                                    Grilled Pork Tenderloin with Apple Cider Glaze‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎
+                                                </label>
+                                                <input id="2radioguest4" type="radio" name="dinner" value="beef"/><label for="2radioguest4" class="radio-label">
+                                                    Beef Medallions with Red Wine Demi-Glace
+                                                </label>
+                                                <input id="3radioguest4" type="radio" name="dinner" value="vegetarian"/><label for="3radioguest4" class="radio-label">
+                                                    Vegetarion Option (TBD)
+                                                </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6" id="guest5" style="display:none;margin-top:10px;">
+                                            <div class="form-input-group">
+                                                <i class="fa fa-user"></i><input name="name5" class=""
+                                                                                 placeholder="Guest 5 Name (if any)"
+                                                                                 >
+                                            </div>
+                                        </div>
+                                        <div class="row section-border" id="guest5meal" style="display:none;">
+                                            <div class="col-md-6 col-sm-6" style="padding-left:5px;padding-right:5px;">
+                                                <h4 style="margin-bottom:0px;">Entrée Choice?</h4>
+                                                <div class="radio">
+                                                <input id="1radioguest5" type="radio" name="dinner" value="pork"/><label for="1radioguest5" class="radio-label">
+                                                    Grilled Pork Tenderloin with Apple Cider Glaze‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎
+                                                </label>
+                                                <input id="2radioguest5" type="radio" name="dinner" value="beef"/><label for="2radioguest5" class="radio-label">
+                                                    Beef Medallions with Red Wine Demi-Glace
+                                                </label>
+                                                <input id="3radioguest5" type="radio" name="dinner" value="vegetarian"/><label for="3radioguest5" class="radio-label">
+                                                    Vegetarion Option (TBD)
+                                                </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="display:none;" id="email-form">
+                                        <div class="col-md-12 col-sm-12" style="margin-top:10px;">
+                                            <div class="form-input-group">
+                                                <i class="fa fa-envelope"></i><input type="email" id="email-form-input" name="email" class=""
+                                                                                     placeholder="Your email"
+                                                                                     >
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-sm-12" id="diet" style="display:none;">
+                                            <div class="form-input-group">
+                                                <i class="fa fa-user"></i><input name="dietRestrictions" id="dietChoice" class=""
+                                                                                 placeholder="Any Dietary Restrictions and for whom? (i.e. Vegan, Gluten Free, Food Allergies, etc.)"
+                                                                                 >
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12" id="alert-wrapper"></div>
+                            </div>
+                            <button class="btn-fill rsvp-btn" id="sub-button" style="width:50%;">
+                                Yes,
+                                that's me!
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center content">
+                <span class="to-top-wrapper"><a href="#top" class="to-top"><i class="fa fa-angle-up"></i></a></span>
+                <p>Made by Luke with lots of <span class="fa fa-heart pulse2"></span> for Ali</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="js/vendor/jquery-1.11.2.min.js" onerror="loadJsFromCDN('jquery.js')"></script>
+<script src="node_modules/waypoints/lib/jquery.waypoints.min.js" onerror="loadJsFromCDN('waypoints.js')"></script>
+<script src="js/jquery.fancybox.pack.js"></script>
+<script src="js/vendor/bootstrap.min.js"></script>
+<script src="js/jquery.flexslider-min.js"></script>
+<script src="js/jquery.mb.YTPlayer.min.js"></script>
+<script src="js/vendor/ouical.js"></script>
+<script src="js/scripts.min.js"></script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoxAkfrGO7kvwZ1U94E2VFki6KHmmMG9s&callback=initMap"></script>
+<!-- Google Analytics -->
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-46465113-4', 'auto');
+    ga('send', 'pageview');
+</script>
+</body>
+</html>
