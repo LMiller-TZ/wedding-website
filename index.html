@@ -222,7 +222,7 @@
                             <li class="hidden-sm hidden-xs"><a href="#map">Location</a></li>
                             <li><a href="#intro">How We Met</a></li>
                             <li><a href="#eng-pics">Photos</a></li>
-                            <li><a href="https://registry.theknot.com/-april-2025-oh/65124451">Registry</a></li>
+                            <li><a href data-toggle="modal" data-target="#registry-modal">Registry</a></li>
                         </ul>
                         <ul class="member-actions">
                             <li><a href="#map" class="login">Venue</a></li>
@@ -267,6 +267,32 @@
         </div>
     </div>
 </section>
+
+<!-- Modal for Registry -->
+<div id="registry-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
+                    </button>
+                    <p>
+                        <strong>It may not be visible on the following page (The Knot) but gifts over $200 are considered "group gifts" meaning you can contribute any 
+                            amount towards the total cost since they are much larger items. You won't see this until you go to that company's website. We appreciate any gifts you are
+                            able to purchase but are mostly excited to see your faces at our wedding! That is the best gift to us so if
+                            travel costs are limiting then please do not worry about purchasing a resitry gift. With love, Ali & Luke!</strong>
+                        <br>
+                        <br>
+                        <a href="https://registry.theknot.com/-april-2025-oh/65124451" target="_blank">
+                            <button class="btn-fill" id="registry-button" style="position:absolute; width:50%; left:50%; transform: translate(-50%, 0%);">
+                                    Registry
+                            </button>
+                        </a>
+                    </p>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
 
 <section id="video-bg" class="hidden-sm hidden-xs">
     <div id="bgndVideo" class="player"
